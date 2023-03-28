@@ -74,4 +74,9 @@ public class UserControl : MonoBehaviour {
 		}
 		range[frame % 60] = rangeLocal;
 	}
+
+	public void OnTriggerEnterReturn(string effect, float value) {
+		//TODO 接触時のエフェクトの作成（特に設定値についても考えていく）
+		Debug.Log(effect + "オブジェクトに接触しました。値は" + value + "です");
+	}
 }
