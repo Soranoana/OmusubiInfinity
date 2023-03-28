@@ -54,7 +54,7 @@ public class UserControl : MonoBehaviour {
 		velocityLocal.x = 0f;
 		float speed = velocityLocal.magnitude;
 		string text = "speedTest1: " + speed;
-		text1.GetComponent<Text>().text = text;
+		text1.text = text;
 	}
 
 	//移動距離から算出
@@ -66,11 +66,11 @@ public class UserControl : MonoBehaviour {
 		if (range[frame % 60] == null) {
 			float speed = rangeLocal / frame * 10000;
 			string text = "speedTest2: " + speed;
-			text2.GetComponent<Text>().text = text;
+			text2.text = text;
 		} else {
 			float speed = ( rangeLocal - range[frame % 60].Value ) / 60f * 10000f;
 			string text = "speedTest2: " + speed;
-			text2.GetComponent<Text>().text = text;
+			text2.text = text;
 		}
 		range[frame % 60] = rangeLocal;
 	}
